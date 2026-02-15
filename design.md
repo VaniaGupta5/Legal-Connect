@@ -130,3 +130,23 @@ J --> K[Apply Ranking Algorithm]
 K --> L[Display Matched Lawyers]
 ```
 
+## System Architecture Diagram
+
+```mermaid
+flowchart LR
+
+User[User Browser] --> Frontend[Frontend Web Application]
+
+Frontend --> Backend[Backend Server]
+
+Backend --> Database[(Database)]
+
+Backend --> AuthService[Authentication Service]
+Backend --> SearchService[Search and Ranking Service]
+Backend --> LawyerService[Lawyer Management Service]
+Backend --> ReviewService[Review Management Service]
+
+Database --> Backend
+Backend --> Frontend
+Frontend --> User
+```
