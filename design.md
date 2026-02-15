@@ -109,3 +109,23 @@ The backend API will be reusable for:
 - iOS App
 - Real-time notifications
 - Online booking
+
+## Process Flow Diagram
+
+```mermaid
+flowchart TD
+
+A[User Visits Website] --> B[Click "Find a Lawyer"]
+B --> C[Enter Case Type]
+C --> D[Enter Budget Range]
+D --> E[Enter Location]
+E --> F[Apply Filters (Optional)]
+
+F --> G[System Processes Search Query]
+G --> H[Filter Lawyers by Case Type]
+H --> I[Filter by Budget]
+I --> J[Filter by Location]
+J --> K[Apply Ranking Algorithm]
+
+K --> L[Display Matched Lawyers]
+```
